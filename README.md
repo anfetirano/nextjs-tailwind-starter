@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js + TailwindCSS v4 Boilerplate
 
-## Getting Started
+Este proyecto es un boilerplate minimalista creado desde cero con Next.js 15 y TailwindCSS v4. Pensado para servir como punto de partida limpio para futuros proyectos.
 
-First, run the development server:
+## 🚀 Tecnologías usadas
+
+- [Next.js 15](https://nextjs.org/)
+- [TailwindCSS v4](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+## 🛠️ Instalación paso a paso
+
+### 1. Crear el proyecto
 
 ```bash
+npx create-next-app@latest my-project-name --typescript
+
+
+2. Instalar TailwindCSS v4 y dependencias
+
+npm install -D tailwindcss postcss autoprefixer
+
+3. Configurar tailwind.config.js (crearlo manualmente)
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+
+4. Crear postcss.config.js
+
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+
+5. Configurar globals.css
+
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+/* Estilos globales opcionales */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+6. Importar globals.css en layout.tsx
+
+import "./globals.css";
+
+correr el proyecto:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📁 Estructura limpia
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Proyecto sin Navbar ni Footer
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ideal como punto de partida para nuevos proyectos
 
-## Learn More
+Listo para producción
 
-To learn more about Next.js, take a look at the following resources:
+📦 Ejecutar en 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+git clone https://github.com/tuusuario/nextjs-tailwind-boilerplate.git
+cd nextjs-tailwind-boilerplate
+npm install
+npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🧠 Nota
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este boilerplate fue creado manualmente sin utilizar npx tailwindcss init ya que en TailwindCSS v4 esta configuración se recomienda hacerla de forma explícita y manual para mayor control.
