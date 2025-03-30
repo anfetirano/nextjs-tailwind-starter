@@ -171,3 +171,7 @@ Repositorio final:
 https://github.com/anfetirano/nextjs-fetching-practice
 ```
 
+
+IMPORTANTE AL FINAL DE TODO ME QUEDARON VARIOS ERRORES EN EL LAYOUT Y EL PAGE LA SOLUCION ES 
+
+npm install 
