@@ -82,3 +82,92 @@ npm run dev
 🧠 Nota
 
 Este boilerplate fue creado manualmente sin utilizar npx tailwindcss init ya que en TailwindCSS v4 esta configuración se recomienda hacerla de forma explícita y manual para mayor control.
+
+
+
+instrucciones para el uso y clonar
+
+# Documentación: Preparación del Proyecto "nextjs-fetching-practice" a partir de un Boilerplate
+
+## 📁 Paso 1: Clonar el boilerplate desde GitHub
+
+El proyecto base fue clonado desde un repositorio previamente creado con una instalación profesional de Next.js y TailwindCSS v4. El repositorio original fue:
+
+```
+https://github.com/anfetirano/nextjs-tailwind-starter.git
+```
+
+Comando utilizado para clonar:
+```bash
+cd D:/Programacion
+git clone https://github.com/anfetirano/nextjs-tailwind-starter.git
+```
+
+Esto generó una carpeta llamada:
+```
+nextjs-tailwind-starter
+```
+
+---
+
+## ✏️ Paso 2: Renombrar el proyecto localmente
+
+Para crear un nuevo proyecto a partir del boilerplate y diferenciarlo, se renombró la carpeta a:
+```
+nextjs-fetching-practice
+```
+
+Esto puede hacerse manualmente desde el explorador de archivos o con:
+```bash
+mv nextjs-tailwind-starter nextjs-fetching-practice
+```
+
+---
+
+## 🛋️ Paso 3: Inicializar un nuevo repositorio Git
+
+Una vez renombrado, se inicializó el proyecto como un nuevo repositorio Git para no conservar el historial del boilerplate anterior:
+
+```bash
+cd nextjs-fetching-practice
+rm -rf .git
+git init
+```
+
+---
+
+## 🌐 Paso 4: Crear un nuevo repositorio en GitHub
+
+Desde GitHub se creó un nuevo repositorio:
+```
+https://github.com/anfetirano/nextjs-fetching-practice.git
+```
+
+Y se vinculó al repositorio local con:
+```bash
+git remote add origin https://github.com/anfetirano/nextjs-fetching-practice.git
+```
+
+---
+
+## 📂 Paso 5: Primer commit y push
+
+Se agregaron los archivos y se subió el primer commit:
+
+```bash
+git add .
+git commit -m "Initial commit from boilerplate"
+git push -u origin master
+```
+
+---
+
+## 🖊️ Resultado Final
+
+Ya tienes un nuevo proyecto listo en local y sincronizado con GitHub, completamente funcional y basado en una estructura profesional con TailwindCSS v4.
+
+Repositorio final:
+```
+https://github.com/anfetirano/nextjs-fetching-practice
+```
+
